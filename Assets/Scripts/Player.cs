@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -64,4 +65,19 @@ public class Player : MonoBehaviour
 
         transform.position = clampedPosition;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle")) // Cambia "Obstacle" por la etiqueta de tus objetos a esquivar
+        {
+            Debug.Log("Colisión con un obstáculo"); // Mensaje de depuración
+            Die(); // Llama al método que maneja la muerte del jugador
+        }
+    }
+
+    private void Die()
+    {
+        // Agrega aquí la lógica para manejar la muerte del jugador, como reiniciar el nivel
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reinicia el nivel actual
+    }
+
 }
