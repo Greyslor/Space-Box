@@ -3,18 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Limite
+  - Techo
+  - Suelo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Limites
+  - Player
+  - Techo
+  - Suelo
   - 
   - 
   - 
@@ -40,4 +43,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 984464375
+    locked: 0
+  - name: Limite
+    uniqueID: 720356393
+    locked: 0
+  - name: techo
+    uniqueID: 2429112281
+    locked: 0
+  - name: Player
+    uniqueID: 3654297773
+    locked: 0
+  - name: Suelo
+    uniqueID: 1507836853
     locked: 0
